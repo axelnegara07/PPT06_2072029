@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ppt06_2072029.controller.FirstController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="showCategory" mnemonicParsing="false" onAction="#OnShowTab" text="Show Category Management">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F2" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="closeHome" mnemonicParsing="false" onAction="#OnCloseHome" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="X" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Report">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#OnSimpleReport" text="Simple Report">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#OnGroupReport" text="Group Report">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="G" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="375.0" prefWidth="270.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefWidth="290.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="80.0" text="ID">
+                     <HBox.margin>
+                        <Insets left="5.0" top="7.5" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtId" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefWidth="290.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="80.0" text="Name">
+                     <HBox.margin>
+                        <Insets left="5.0" top="7.5" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtName" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefWidth="290.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="80.0" text="Price">
+                     <HBox.margin>
+                        <Insets left="5.0" top="7.5" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtPrice" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefWidth="290.0">
+               <children>
+                  <Label prefWidth="80.0" text="Description">
+                     <HBox.margin>
+                        <Insets left="5.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtDescription" prefHeight="60.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefWidth="290.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="67.0" text="Category">
+                     <HBox.margin>
+                        <Insets left="5.0" top="7.5" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboCategory" prefHeight="25.0" prefWidth="120.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefWidth="290.0">
+               <children>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#OnSave" text="Save">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnReset" mnemonicParsing="false" onAction="#OnReset" text="Reset">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#OnUpdate" text="Update">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#OnDelete" text="Delete">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tableHome" onMouseClicked="#OnClick" prefHeight="375.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="55.33331298828125" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="91.3333740234375" text="NAME" />
+            <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="106.66665649414062" text="PRICE" />
+            <TableColumn fx:id="colCategory" minWidth="0.0" prefWidth="118.66668701171875" text="CATEGORY" />
+        </columns>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>
